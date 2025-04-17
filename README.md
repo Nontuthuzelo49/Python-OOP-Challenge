@@ -63,5 +63,5 @@ Submission format: clone / fork this repo
 
 Bonus points for creativity (custom actions, emojis, pet types, etc.)
 
-![visual studio code terminal output](OOP Challange.PNG)
+![VS Code Terminal Output](https://raw.githubusercontent.com/mutheeEverlyn/OOP-Challenge/main/OOP%20Challange.PNG)
 
