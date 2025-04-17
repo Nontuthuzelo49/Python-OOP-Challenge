@@ -1,3 +1,6 @@
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+
 class Pet:
     def __init__(self, name):
         self.name = name
@@ -5,47 +8,55 @@ class Pet:
         self.energy = 5
         self.happiness = 5
         self.tricks = []
-    # Let each group member add their methods here
 
+    # (Other members' methods stay here - DON'T TOUCH)
 
-    #This will be used to print the status as required
     def get_status(self):
-        # The current status of the pet
-        print(f"\n{self.name}'s status:")
-        print(f"Hunger: [{'|' * self.hunger}{' ' * (10 - self.hunger)}] {self.hunger}/10")
-        print(f"Energy: [{'|' * self.energy}{' ' * (10 - self.energy)}] {self.energy}/10")
-        print(f"Happiness: [{'|' * self.happiness}{' ' * (10 - self.happiness)}] {self.happiness}/10")
+        """Display pet's status with emoji bars"""
+        print(f"\n📊 {self.name}'s Status:")
+        print(f"Hunger:    [{'🍕' * self.hunger}{'⬜' * (10 - self.hunger)}] {self.hunger}/10")
+        print(f"Energy:    [{'⚡' * self.energy}{'⬜' * (10 - self.energy)}] {self.energy}/10")
+        print(f"Happiness: [{'❤️' * self.happiness}{'⬜' * (10 - self.happiness)}] {self.happiness}/10")
         
+        # Warnings
         if self.hunger >= 8:
-            print("WARNING: I am Starving!")
+            print("⚠️ Feed me! (Hunger ≥ 8)")
         if self.energy <= 2:
-            print("WARNING: I am too tired to play!")
+            print("⚠️ Zzz... I need sleep! (Energy ≤ 2)")
         if self.happiness <= 2:
-            print("WARNING: I am sad!")
+            print("⚠️ Play with me! (Happiness ≤ 2)")
 
     def train(self, trick):
-        # Teach the pet a new trick
-        if not hasattr(self, 'tricks'):
-            self.tricks = []
-        if trick in self.tricks:
-            print(f"{self.name} already knows '{trick}'.")
+        """Teach a new trick (case-insensitive)"""
+        if not isinstance(trick, str):
+            print("❌ Trick must be a string!")
+            return
+
+        trick = trick.strip().title()
+        if trick.lower() in [t.lower() for t in self.tricks]:
+            print(f"🐾 {self.name} already knows '{trick}'!")
         else:
             self.tricks.append(trick)
-            print(f"Successfully taught {self.name} the trick '{trick}'!")
             self.happiness = min(10, self.happiness + 1)
+            print(f"🎉 {self.name} learned '{trick}'!")
 
     def show_tricks(self):
-        # Show the pet's tricks
-        if not hasattr(self, 'tricks') or not self.tricks:
-            print(f"{self.name} doesn't know any tricks yet.")
+        """Show all tricks with numbering"""
+        if not self.tricks:
+            print(f"📭 {self.name} knows no tricks yet.")
         else:
-            print(f"\n{self.name}'s tricks:")
+            print(f"\n📜 {self.name}'s Tricks:")
             for i, trick in enumerate(self.tricks, 1):
-                print(f"{i}. {trick}")
+                print(f"{i}. {trick} 🎯")
 
-
-
-
-
+    
     def __str__(self):
         return f"{self.name} is an amazing pet."
+    
+
+# pet = Pet("Fluffy")
+# pet.train("Roll Over")
+# pet.train("Play Dead")
+# pet.train("Run")
+# pet.show_tricks()
+# pet.get_status()
