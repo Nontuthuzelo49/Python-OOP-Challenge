@@ -14,6 +14,7 @@ class Pet:
     def sleep(self):
         self.energy = min(10, self.energy + 5)
         print(f"{self.name} is now resting...")
+
     def play(self):
         if self.energy >= 2:
             self.energy -= 2
