@@ -7,19 +7,10 @@ class Pet:
         self.tricks = []
 
     def eat(self):
-        # TODO
+        self.hunger = max(0, self.hunger - 3)
+        self.happiness = min(10, self.happiness + 1)
+        print(f"{self.name} eats happily!")
 
     def sleep(self):
-        # TODO
-
-    def play(self):
-        # TODO
-
-    def train(self, trick):
-        # TODO
-
-    def show_tricks(self):
-        # TODO
-
-    def get_status(self):
-        # TODO
+        self.energy = min(10, self.energy + 5)
+        print(f"{self.name} is now resting...")
