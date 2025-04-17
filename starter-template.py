@@ -7,19 +7,31 @@ class Pet:
         self.tricks = []
 
     def eat(self):
-        # TODO
-
+        self.hunger = max(0, self.hunger - 3)  # Ensure hunger doesn’t go below 0
+        self.happiness = min(10, self.happiness + 1)  # Ensure happiness doesn’t exceed 10
+        print(f"{self.name} ate food. Hunger: {self.hunger}, Happiness: {self.happiness}")
+       
     def sleep(self):
-        # TODO
+        self.energy = min(10, self.energy + 5)  # Ensure energy doesn’t go above 10
+        print(f"{self.name} slept. Energy: {self.energy}")
 
     def play(self):
-        # TODO
+        self.energy = max(0, self.energy - 2)  # Reduce energy but not below 0
+        self.happiness = min(10, self.happiness + 2)  # Increase happiness but not above 10
+        self.hunger = min(10, self.hunger + 1)  # Increase hunger but not above 10
+        print(f"{self.name} played! Energy: {self.energy}, Happiness: {self.happiness}, Hunger: {self.hunger}")
+
 
     def train(self, trick):
-        # TODO
+        self.tricks.append(trick)  # Add trick to the list
+        print(f"{self.name} learned a new trick: {trick}!")
 
     def show_tricks(self):
-        # TODO
+        if self.tricks:
+            print(f"{self.name} knows these tricks: {', '.join(self.tricks)}")
+        else:
+            print(f"{self.name} hasn't learned any tricks yet.")
 
     def get_status(self):
-        # TODO
+        print(f"{self.name}'s Status ➡ Hunger: {self.hunger}, Energy: {self.energy}, Happiness: {self.happiness}")
+
