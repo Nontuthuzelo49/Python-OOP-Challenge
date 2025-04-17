@@ -1,9 +1,9 @@
 class Pet:
     def __init__(self, name="Wizkid", pet_type="🐶"):
         self.name = name
-        self.hunger = 4
-        self.energy = 4
-        self.happiness = 10
+        self.hunger = 10
+        self.energy = 10
+        self.happiness = 5
         self.pet_type = pet_type
         self.tricks = []
 
