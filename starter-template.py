@@ -14,3 +14,15 @@ class Pet:
     def sleep(self):
         self.energy = min(10, self.energy + 5)
         print(f"{self.name} is now resting...")
+    def play(self):
+        if self.energy >= 2:
+            self.energy -= 2
+            self.happiness = min(10, self.happiness + 2)
+            self.hunger = min(10, self.hunger + 1)
+            print(f"{self.name} plays around with me!")
+        else:
+            print(f"{self.name} is too tired to play.")
+
+    def train(self, trick):
+        self.tricks.append(trick)
+        print(f"{self.name} learned a new trick: {trick}!")
