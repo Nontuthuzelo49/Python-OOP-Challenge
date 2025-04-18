@@ -11,7 +11,7 @@ class Pet:
         pass
 
     def sleep(self):
-        pass
+        self.energy = min(10, self.energy + 5)  # Increase energy, but not above 10
 
     def play(self):
         pass
