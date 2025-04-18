@@ -113,7 +113,7 @@ This project was developed as part of the **PLP Academy Group Assignment**. Belo
 - **Email**: [Your Email]
 - **GitHub**: [Your GitHub Profile]
 
-#### [Add Your Name Here]
+#### Evan Omanga
 
 - **Role**: ReadMe.md file documentation
 - **Email**: [evanwayodi19@gmail.com]
