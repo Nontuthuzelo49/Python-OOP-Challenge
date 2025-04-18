@@ -20,7 +20,10 @@ class Pet:
         pass
 
     def show_tricks(self):
-        pass
+        if self.tricks:  # Check if the pet knows any tricks
+            print(f"{self.name} knows these tricks: {', '.join(self.tricks)}")  # List the tricks
+        else:
+            print(f"{self.name} knows zero tricks at the moment.")  # Notify if no tricks are known
 
     def get_status(self):
         pass
