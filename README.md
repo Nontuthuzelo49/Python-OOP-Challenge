@@ -63,3 +63,30 @@ Submission format: clone / fork this repo
 
 Bonus points for creativity (custom actions, emojis, pet types, etc.)
 
+﻿# bookstore_db
+![bookstore ERD]()
+
+## Contributors
+
+<!-- readme: contributors -start -->
+<table>
+	<tbody>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/RencyBoreh">
+                    <img src="https://avatars.githubusercontent.com/u/160844462?v=4" width="100;" alt="RencyBoreh"/>
+                    <br />
+                    <sub><b>RencyBoreh</b></sub>
+                </a>
+            </td>
+	   <td align="center">
+                <a href="https://github.com/mutheeEverlyn">
+                    <img src="https://avatars.githubusercontent.com/u/123722613?v=4" width="100;" alt="mutheeEverlyn"/>
+                    <br />
+                    <sub><b>MutheeEverlyn</b></sub>
+                </a>
+            </td>
+		</tr>
+	<tbody>
+</table>
+<!-- readme: contributors -end -->
