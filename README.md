@@ -116,8 +116,8 @@ This project was developed as part of the **PLP Academy Group Assignment**. Belo
 #### Evan Omanga
 
 - **Role**: ReadMe.md file documentation
-- **Email**: [evanwayodi19@gmail.com]
-- **GitHub**: [Evan19-CoDe]
+- **Email**: evanwayodi19@gmail.com
+- **GitHub**: Evan19-CoDe
 
 > **Note**: All group members are encouraged to update their details in this section.
 
