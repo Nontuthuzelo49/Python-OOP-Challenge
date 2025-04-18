@@ -115,9 +115,9 @@ This project was developed as part of the **PLP Academy Group Assignment**. Belo
 
 #### [Add Your Name Here]
 
-- **Role**: [Your Role]
-- **Email**: [Your Email]
-- **GitHub**: [Your GitHub Profile]
+- **Role**: ReadMe.md file documentation
+- **Email**: [evanwayodi19@gmail.com]
+- **GitHub**: [Evan19-CoDe]
 
 > **Note**: All group members are encouraged to update their details in this section.
 
