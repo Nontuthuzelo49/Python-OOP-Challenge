@@ -17,7 +17,9 @@ class Pet:
         pass
 
     def train(self, trick):
-        pass
+        self.tricks.append(trick)  # Add the new trick to the list of tricks
+        print(f"{self.name} learned a new trick: {trick}!")  # Notify the user
+
 
     def show_tricks(self):
         pass
