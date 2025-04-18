@@ -11,7 +11,8 @@ class Pet:
         pass
 
     def sleep(self):
-        pass
+        self.energy = min(self.energy + 5, 10)
+        print(f"{self.name} is sleeping. Energy is now {self.energy}.")
 
     def play(self):
         pass
