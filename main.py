@@ -4,21 +4,21 @@ from pet import Pet
 print("Creating pet: Dog")
 dog = Pet("Leo", pet_type="dog")
 
-#dog the pet's methods
+# Dog does the pet's methods
 dog.eat()
 dog.play()
 dog.sleep()
 
-#dog the pet some tricks
+# Teach the dog some tricks
 dog.train("roll over")
 dog.train("play dead")
 
-#dog the pet's tricks
+# Show the dog's tricks
 dog.show_tricks()
 
 # Custom actions
 dog.bath()
 dog.walk()
 
-#dog he pet's current status
+# Show the dog's current status
 dog.get_status()
