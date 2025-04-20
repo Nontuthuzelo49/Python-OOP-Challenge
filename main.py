@@ -9,6 +9,25 @@ import time
 - The program is designed to be run in a terminal or command prompt, and it provides clear instructions for the user to follow.
 """
 
+# main.py
+from pet import Pet
+
+# Create a pet instance
+my_pet = Pet("Fluffy")
+
+# Show pet name and initial status
+print(f"\n🐾 Welcome! You’ve adopted {my_pet.name}!")
+my_pet.get_status()
+
+# Teach tricks
+my_pet.train("roll over")
+my_pet.train("fetch")
+my_pet.train("sit")
+
+# Show learned tricks
+my_pet.show_tricks()
+
+
 def loading(action, petName=""):
     """Simulate loading time for pet actions."""
     if action == "teach":
@@ -18,8 +37,9 @@ def loading(action, petName=""):
         for i in range(3):
             print(".", end="")
             # time.sleep(1)
-        time.sleep(1) 
+        time.sleep(1)
         print("")
+
 
 # Main program starts here
 print("==============================================")
@@ -79,7 +99,8 @@ while True:
             time.sleep(2)  # Adding a delay for better readability
             continue
         elif len(trick) < 3:
-            print("Trick name is too short. Please provide a name with at least 3 characters.")
+            print(
+                "Trick name is too short. Please provide a name with at least 3 characters.")
             time.sleep(2)  # Adding a delay for better readability
             continue
         elif not trick.isalpha():
@@ -108,4 +129,4 @@ while True:
 print("Closing the Pet simulator", end="")
 for i in range(3):
     print(".", end="")
-    time.sleep(1)          
+    time.sleep(1)
