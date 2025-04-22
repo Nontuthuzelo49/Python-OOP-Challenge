@@ -69,7 +69,7 @@ This project was developed as part of the **PLP Academy Group Assignment**.
 
 - **Role**: Developer
 - **Email**: [thukubrianngugi1@gmail.com](thukubrianngugi1@gmail.com)
-- **GitHub**: [@Thukubrian1e](https://github.com/Thukubrian1)
+- **GitHub**: [@Thukubrian1](https://github.com/Thukubrian1)
 
 Stay tuned for updates as we continue to make the **Pet Simulator** even more engaging and fun!
 
