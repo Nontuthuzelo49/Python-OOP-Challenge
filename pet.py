@@ -1,5 +1,3 @@
-import time
-
 class Pet:
     def __init__(self, name):
         self.name = name
@@ -7,63 +5,39 @@ class Pet:
         self.energy = 5
         self.happiness = 5
         self.tricks = []
-
-    # Let each group member add their methods here
-
+    
     def eat(self):
-     """
-     Reduces hunger by 3, but never lets it go below 0.
-     increases happiness by 1 but doesn't go beyond 10
-     """
-     if self.hunger >= 3:
-        self.hunger -= 3
-     else:
-         self.hunger = 0
-     self.happiness = min(self.happiness + 1, 10)
-     time.sleep(2)
-     print(f"{self.name} has eaten🎉.")
-     time.sleep(1)
-
-    def sleep(self):
-     """adds energy by 5 but doesn't go beyond 10"""
-     self.energy = min(self.energy + 5, 10)
-     time.sleep(1)
-     print(f"{self.name} has slept💤💤.")
-
-    def play(self):
-        """Decreases energy by 2 and increase happiness by 1"""
-        if self.energy >= 2:
-            self.energy -= 2
-            self.happiness = min(self.happiness + 2, 10)
-            self.hunger = min(self.hunger + 1, 10)
-            print("You played with your pet.")
-        else:
-            print(f"{self.name} is too tired to play😔.")
+        self.hunger = max(0, self.hunger - 3)
+        self.happiness = min(10, self.happiness + 1)
+        return f"{self.name} is eating... Yum!"
     
     def sleep(self):
-        """Increases energy by 5 but doesn't go beyond 10"""
-        self.energy = min(self.energy + 5, 10)
-        print(f"{self.name} has slept.")
-
+        self.energy = min(10, self.energy + 5)
+        return f"{self.name} is sleeping... Zzz"
+    
+    def play(self):
+        self.energy = max(0, self.energy - 2)
+        self.happiness = min(10, self.happiness + 2)
+        self.hunger = min(10, self.hunger + 1)
+        return f"{self.name} is playing... Woo!"
+    
     def get_status(self):
-        """Prints the current status of the pet"""
-        print(f"\n{self.name}'s current status: \n🍚 Hunger: {self.hunger}\n⚡ Energy: {self.energy}\n🐱 Happiness: {self.happiness}\n🎃 Tricks: {', '.join(self.tricks) if self.tricks else f'{self.name} doesn\'t know any tricks yet.'}")
-        time.sleep(5)
-
+        return f"""
+{self.name}'s Status:
+Hunger: {self.hunger}/10
+Energy: {self.energy}/10
+Happiness: {self.happiness}/10
+"""
+    
     def train(self, trick):
-        """Teach the pet a new trick"""
-        if trick in self.tricks:
-            print(f"{self.name} already knows '{trick}'.")
-        else:
+        if trick not in self.tricks:
             self.tricks.append(trick)
-            print(f"\nSuccessfully taught {self.name} the trick '{trick}🎉'!")
-            time.sleep(4)
-            
+            self.energy = max(0, self.energy - 1)
+            self.happiness = min(10, self.happiness + 1)
+            return f"{self.name} learned to {trick}!"
+        return f"{self.name} already knows how to {trick}!"
+    
     def show_tricks(self):
-        # Show the pet's tricks
         if not self.tricks:
-            print(f"{self.name} doesn't know any tricks yet😔.")
-        else:
-            print(f"\n{self.name}'s tricks:")
-            for i, trick in enumerate(self.tricks, 1):
-                print(f"{i}. 🎃 {trick}")
+            return f"{self.name} doesn't know any tricks yet!"
+        return f"{self.name}'s tricks: {', '.join(self.tricks)}"
